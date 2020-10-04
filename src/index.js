@@ -40,7 +40,7 @@ module.exports = function toReadable (number) {
     let result = '';
     if (firstNumber > 0) result += dictionaryOne[firstNumber] + ' hundred ';
     if (secondNumber > 1) result += dictionaryTwo[secondNumber] + ' ';
-    if (firstRest > 19 && secondRest != 0) { result += dictionaryOne[secondRest]; }
-    if (firstRest <= 19 && firstRest != 0) { result += dictionaryOne[firstRest]; }
+    if (firstRest > 19 && secondRest != 0) result += dictionaryOne[secondRest];
+    if (firstRest <= 19 && firstRest != 0) result += dictionaryOne[firstRest];
     return result.trim() || 'zero';
 }
